@@ -1,0 +1,13 @@
+name: schedule
+on:
+    schedule:
+        - cron: "0 0 * * *"
+        - cron: "5 10 4 * 6"
+
+jobs:
+    daily_task:
+        run_on: ubuntu-latest
+        steps:
+          - name: print massage
+            run: echo "running the schedule task"
+          
